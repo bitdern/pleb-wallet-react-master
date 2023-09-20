@@ -11,6 +11,7 @@ function App() {
   const [transactions, setTransactions] = useState([]);
   const [chartData, setChartData] = useState(null);
 
+  // In order to run this yourself, you need a (free) LNbits account --> https://lnbits.com/
   const apiKey = process.env.REACT_APP_X_API_KEY;
 
   const getPrice = () => {
@@ -32,7 +33,6 @@ function App() {
   };
 
   const getWalletBalance = () => {
-    // ToDo: Lookup how to move the X-API-Key to a .env file to keep it secret for when we push to Github
     const headers = {
       "X-Api-Key": apiKey,
     };
@@ -46,7 +46,6 @@ function App() {
   };
 
   const getTransactions = () => {
-    // ToDo: Lookup how to move the X-API-Key to a .env file to keep it secret for when we push to Github
     const headers = {
       "X-Api-Key": apiKey,
     };
@@ -110,7 +109,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>dern wallet</h1>
+        <h1>pleb wallet</h1>
       </header>
       <Buttons />
       <div className="row">
@@ -132,7 +131,7 @@ function App() {
         </div>
       </div>
       <footer>
-        <p>Made by dern, for dern.</p>
+        <p>Made by dern, for plebs.</p>
       </footer>
     </div>
   );
